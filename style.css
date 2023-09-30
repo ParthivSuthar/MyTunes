@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple500: #281154;
+    --purple300: #270082;
+    --purple600: #1b0058;
+    --red600: #dc0000;
+    --body: #f9f6ff;
+}
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    font-weight: 500;
+    scroll-behavior: smooth;
+
+}
+
+section {
+    scroll-margin: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--purple300);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 5px red;
+}
+
+nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.brand {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    border: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+nav li:hover {
+    border-bottom: 2px solid white;
+}
+
+.hero-section {
+    background-image: url(/images/hero_image.png);
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-section h1 {
+    font-size: 96px;
+}
+
+.hero-section h3 {
+    font-size: 32px;
+}
+
+.music-section {
+    padding-top: 50px;
+    background-color: var(--purple500);
+}
+
+.music-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: whitesmoke;
+}
+
+.primary-btn {
+    background-color: var(--red600);
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.secondary-btn {
+    background-color: var(--purple300);
+    color: whitesmoke;
+}
+
+.iphone-ipad-img {
+    position: relative;
+    top: 400px;
+    margin-top: -400px;
+}
+
+.about-music {
+    padding-top: 500px;
+    display: grid;
+    place-items: center;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-section {
+    background-image: url(/images/video.png);
+    display: grid;
+    place-items: center;
+    min-height: 800px;
+    color: whitesmoke;
+    text-align: center;
+    background-size: cover;
+}
+
+.video-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -250px;
+}
+
+
+.gift-section {
+    display: flex;
+    margin: 100px 0;
+    gap: 50px;
+    justify-content: center;
+}
+
+.gift-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-upper {
+    background-color: var(--purple600);
+    padding: 20px;
+}
+
+.footer-upper .container {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.footer-upper h4 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid whitesmoke;
+    margin-bottom: 10px;
+}
+
+.footer-lower {
+    background-color: var(--purple300);
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: wheat;
+}
+
+
+/* Make Responsive */
+
+@media (max-width: 600px) {
+    nav {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    section {
+        scroll-margin: 50px;
+    }
+
+    .music-section {
+        padding: 10px;
+    }
+    
+    .iphone-ipad-img {
+        position: absolute;
+        margin-top: 220%; 
+    }
+    .iphone-ipad-img  img{
+        width: 100%;
+    }
+
+    .about-music {
+        margin-top: -150px;
+    }
+
+    .mac-img img {
+        width: 100%;
+    }
+
+    .video-section {
+        padding: 10px;
+    }
+
+    .gift-section {
+        flex-direction: column;
+    }
+
+    .gift-card img{
+        width: 100%;
+    }
+
+    .gift-content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer-upper {
+        justify-content: space-around;
+    }
+
+    .footer-links {
+        width: 23%;
+    }
+}
